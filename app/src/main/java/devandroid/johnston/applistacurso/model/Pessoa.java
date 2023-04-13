@@ -1,5 +1,7 @@
 package devandroid.johnston.applistacurso.model;
 
+import androidx.annotation.NonNull;
+
 public class Pessoa {
 
     //Método Construtor
@@ -43,8 +45,18 @@ public class Pessoa {
         this.telefoneContato = telefoneContato;
     }
 
-    public Pessoa() { //método Pessoa
-
-
+    @Override //sobrescrever
+    public String toString() {
+        return "Pessoa{" +
+                "primeiroNome='" + primeiroNome + '\'' +
+                ", sobreNome='" + sobreNome + '\'' +
+                ", cursoDesejado='" + cursoDesejado + '\'' +
+                ", telefoneContato='" + telefoneContato + '\'' +
+                '}';
     }
+
+    //   public Pessoa() { //método Pessoa
+
+
+   // }
 }

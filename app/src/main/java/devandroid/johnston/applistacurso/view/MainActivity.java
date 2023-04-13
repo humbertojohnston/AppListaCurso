@@ -31,26 +31,28 @@ public class MainActivity extends AppCompatActivity {
         outraPessoa.setCursoDesejado("Java");
         outraPessoa.setTelefoneContato("91 981891234");
 
-       dadosPessoa = "Primeiro nome: ";
-       dadosPessoa += pessoa.getPrimeiroNome();
-       dadosPessoa += " Sobrenome ";
-       dadosPessoa += pessoa.getSobreNome();
-       dadosPessoa += " Curso desejado: ";
-       dadosPessoa += pessoa.getCursoDesejado();
-       dadosPessoa += " Telefone de contato ";
-       dadosPessoa += pessoa.getTelefoneContato();
+       //dadosPessoa = "Primeiro nome: ";
+       //dadosPessoa += pessoa.getPrimeiroNome();
+       //dadosPessoa += " Sobrenome ";
+       //dadosPessoa += pessoa.getSobreNome();
+       //dadosPessoa += " Curso desejado: ";
+       //dadosPessoa += pessoa.getCursoDesejado();
+       //dadosPessoa += " Telefone de contato ";
+       //dadosPessoa += pessoa.getTelefoneContato();
 
-        dadosOutraPessoa = "Primeiro nome: ";
-        dadosOutraPessoa += outraPessoa.getPrimeiroNome();
-        dadosOutraPessoa += " Sobrenome ";
-        dadosOutraPessoa += outraPessoa.getSobreNome();
-        dadosOutraPessoa += " Curso desejado: ";
-        dadosOutraPessoa += outraPessoa.getCursoDesejado();
-        dadosOutraPessoa += " Telefone de contato ";
-        dadosOutraPessoa += outraPessoa.getTelefoneContato();
+       dadosPessoa = "Primeiro nome: " + pessoa.getPrimeiroNome();
+       dadosPessoa = " Sobrenome " + pessoa.getSobreNome();
+       dadosPessoa = " Curso desejado: " + pessoa.getCursoDesejado();
+       dadosPessoa = " Telefone de contato " + pessoa.getTelefoneContato();
 
-
-
+       dadosOutraPessoa = "Primeiro nome: ";
+       dadosOutraPessoa += outraPessoa.getPrimeiroNome();
+       dadosOutraPessoa += " Sobrenome ";
+       dadosOutraPessoa += outraPessoa.getSobreNome();
+       dadosOutraPessoa += " Curso desejado: ";
+       dadosOutraPessoa += outraPessoa.getCursoDesejado();
+       dadosOutraPessoa += " Telefone de contato ";
+       dadosOutraPessoa += outraPessoa.getTelefoneContato();
 
 
     }
