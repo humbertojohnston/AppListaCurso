@@ -2,6 +2,8 @@ package devandroid.johnston.applistacurso.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+
 import devandroid.johnston.applistacurso.R;
 import devandroid.johnston.applistacurso.model.Pessoa;
 
@@ -31,16 +33,16 @@ public class MainActivity extends AppCompatActivity {
         outraPessoa.setCursoDesejado("Java");
         outraPessoa.setTelefoneContato("91 981891234");
 
-       //dadosPessoa = "Primeiro nome: ";
-       //dadosPessoa += pessoa.getPrimeiroNome();
-       //dadosPessoa += " Sobrenome ";
-       //dadosPessoa += pessoa.getSobreNome();
-       //dadosPessoa += " Curso desejado: ";
-       //dadosPessoa += pessoa.getCursoDesejado();
-       //dadosPessoa += " Telefone de contato ";
-       //dadosPessoa += pessoa.getTelefoneContato();
+ /*      dadosPessoa = "Primeiro nome: ";
+       dadosPessoa += pessoa.getPrimeiroNome();
+       dadosPessoa += " Sobrenome ";
+       dadosPessoa += pessoa.getSobreNome();
+       dadosPessoa += " Curso desejado: ";
+       dadosPessoa += pessoa.getCursoDesejado();
+       dadosPessoa += " Telefone de contato ";
+       dadosPessoa += pessoa.getTelefoneContato();
 
-       dadosPessoa = "Primeiro nome: " + pessoa.getPrimeiroNome();
+ *      dadosPessoa = "Primeiro nome: " + pessoa.getPrimeiroNome();
        dadosPessoa = " Sobrenome " + pessoa.getSobreNome();
        dadosPessoa = " Curso desejado: " + pessoa.getCursoDesejado();
        dadosPessoa = " Telefone de contato " + pessoa.getTelefoneContato();
@@ -52,8 +54,10 @@ public class MainActivity extends AppCompatActivity {
        dadosOutraPessoa += " Curso desejado: ";
        dadosOutraPessoa += outraPessoa.getCursoDesejado();
        dadosOutraPessoa += " Telefone de contato ";
-       dadosOutraPessoa += outraPessoa.getTelefoneContato();
+       dadosOutraPessoa += outraPessoa.getTelefoneContato(); */
 
+       Log.i("POOAndroid", "Objeto pessoa: "+pessoa.toString());
+       Log.i("POOAndroid","Objeto outra pessoa: "+outraPessoa.toString());
 
     }
 }
