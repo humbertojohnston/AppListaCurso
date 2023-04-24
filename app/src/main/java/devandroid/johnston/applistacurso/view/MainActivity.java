@@ -10,12 +10,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import devandroid.johnston.applistacurso.R;
+import devandroid.johnston.applistacurso.controller.PessoaController;
 import devandroid.johnston.applistacurso.model.Pessoa;
 
 
 public class MainActivity extends AppCompatActivity {
-
-
+    PessoaController controller;
+    Pessoa pessoa;
+    Pessoa outraPessoa;
     EditText editPrimeiroNome;
     EditText editSobrenomeAluno;
     EditText editNomeCurso;
@@ -29,10 +31,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        controller = new PessoaController();
+        controller.toString();
 
-        Pessoa pessoa = new Pessoa();
+        pessoa = new Pessoa();
 
-        Pessoa outraPessoa = new Pessoa();
+        outraPessoa = new Pessoa();
         outraPessoa.setPrimeiroNome("Alicia");
         outraPessoa.setSobreNome("Pinheiro");
         outraPessoa.setCursoDesejado("Java");
@@ -80,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setCursoDesejado(editNomeCurso.getText().toString());
                 pessoa.setTelefoneContato(editTelefone.getText().toString());
                 Toast.makeText(MainActivity.this, "Salvo!" + pessoa.toString(), Toast.LENGTH_LONG).show();
+
+                controller.salvar(pessoa);
 
             }
         });
