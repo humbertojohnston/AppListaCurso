@@ -55,8 +55,4 @@ public class Pessoa {
                 '}';
     }
 
-    //   public Pessoa() { //método Pessoa
-
-
-   // }
 }

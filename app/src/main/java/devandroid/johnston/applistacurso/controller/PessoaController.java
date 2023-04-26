@@ -16,7 +16,7 @@ public class PessoaController {
         return super.toString();
     }
 
-    public void salvar(Pessoa pessoa) {
-    Log.d("MVC_Controller","Controller salvo "+pessoa.toString());
+    public void salvar(Pessoa pessoa) {  //aula 38/2023
+    Log.d("MVC_Controller","Controller salvo "+pessoa.toString()); //aula 38/2023
     }
 }
