@@ -17,6 +17,7 @@ import devandroid.johnston.applistacurso.model.Pessoa;
 public class MainActivity extends AppCompatActivity {
 
     SharedPreferences preferences; //aula 38/2023
+    SharedPreferences.Editor listaVip; //aula 40.2023
     public static final String NOME_PREFERENCES = "pref_listavip"; //aula 38/2023
 
     PessoaController controller; //aula 38/2023
@@ -38,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         preferences = getSharedPreferences(NOME_PREFERENCES, 0); //aula 38/2023
-        SharedPreferences.Editor listaVip = preferences.edit(); //aula 38.2023
+
+        listaVip = preferences.edit(); //aula 38.2023
 
         controller = new PessoaController();
         controller.toString();
@@ -70,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 editSobrenomeAluno.setText("");
                 editNomeCurso.setText("");
                 editTelefone.setText("");
+                listaVip.clear(); //aula 40.2023
+                listaVip.apply(); //aula 40.2023
             }
 
         });
