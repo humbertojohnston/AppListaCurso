@@ -16,10 +16,6 @@ import devandroid.johnston.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
-    SharedPreferences preferences; //aula 38/2023
-    SharedPreferences.Editor listaVip; //aula 40.2023
-    public static final String NOME_PREFERENCES = "pref_listavip"; //aula 38/2023
-
     PessoaController controller; //aula 38/2023
     Pessoa pessoa;
 
@@ -38,19 +34,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        preferences = getSharedPreferences(NOME_PREFERENCES, 0); //aula 38/2023
-
-        listaVip = preferences.edit(); //aula 38.2023
-
-        controller = new PessoaController();
+        controller = new PessoaController(MainActivity.this);
         controller.toString();
 
         pessoa = new Pessoa();
-        pessoa.setPrimeiroNome(preferences.getString("primeiroNome","NA")); //aula 39.23
-        pessoa.setSobreNome(preferences.getString("sobrenome","")); //aula 39.23
-        pessoa.setCursoDesejado(preferences.getString("nomeCurso","")); //aula 39.23
-        pessoa.setTelefoneContato(preferences.getString("telefoneContato","")); //aula 39.23
-
+        controller.buscar(pessoa);
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome); //Busca a classe nativa AppCompatActivity AULA 33.2023
         editSobrenomeAluno = findViewById(R.id.editSobrenomeAluno); //Busca a classe nativa AppCompatActivity AULA 33.2023
         editNomeCurso = findViewById(R.id.editNomeCurso); //Busca a classe nativa AppCompatActivity AULA 33.2023
@@ -72,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 editSobrenomeAluno.setText("");
                 editNomeCurso.setText("");
                 editTelefone.setText("");
-                listaVip.clear(); //aula 40.2023
-                listaVip.apply(); //aula 40.2023
+                controller.limpar(); //aula 43/2023
+
             }
 
         });
@@ -95,12 +83,6 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setCursoDesejado(editNomeCurso.getText().toString());
                 pessoa.setTelefoneContato(editTelefone.getText().toString());
                 Toast.makeText(MainActivity.this, "Salvo!" + pessoa.toString(), Toast.LENGTH_LONG).show();
-
-                listaVip.putString("primeiroNome", pessoa.getPrimeiroNome()); //aula 38.2023
-                listaVip.putString("sobrenome", pessoa.getSobreNome()); //aula 38.2023
-                listaVip.putString("nomeCurso", pessoa.getCursoDesejado()); //aula 38.2023
-                listaVip.putString("telefoneContato", pessoa.getTelefoneContato()); //aula 38.2023
-                listaVip.apply(); //aula 38.2023 esta linha salva os dados no arquivo
 
                 controller.salvar(pessoa); //aula 38/2023
 
