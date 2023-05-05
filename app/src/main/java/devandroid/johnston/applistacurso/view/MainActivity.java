@@ -10,16 +10,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.List;
+
 import devandroid.johnston.applistacurso.R;
+import devandroid.johnston.applistacurso.controller.CursoController;
 import devandroid.johnston.applistacurso.controller.PessoaController;
+import devandroid.johnston.applistacurso.model.Curso;
 import devandroid.johnston.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
-    PessoaController controller; //aula 38/2023
+    PessoaController controller; //aula 38/2023 CRIAÇÃO DO OBJETO
+    CursoController cursoController; //aula 47.2003 CRIAÇÃO DO OBJETO
+
     Pessoa pessoa;
 
-    //Pessoa outraPessoa;
+    List <Curso> listaDeCursos;
+
     EditText editPrimeiroNome;
     EditText editSobrenomeAluno;
     EditText editNomeCurso;
@@ -37,8 +44,12 @@ public class MainActivity extends AppCompatActivity {
         controller = new PessoaController(MainActivity.this);
         controller.toString();
 
+        cursoController = new CursoController();
+        listaDeCursos = cursoController.getListaDeCursos();
+
         pessoa = new Pessoa();
         controller.buscar(pessoa);
+
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome); //Busca a classe nativa AppCompatActivity AULA 33.2023
         editSobrenomeAluno = findViewById(R.id.editSobrenomeAluno); //Busca a classe nativa AppCompatActivity AULA 33.2023
         editNomeCurso = findViewById(R.id.editNomeCurso); //Busca a classe nativa AppCompatActivity AULA 33.2023
