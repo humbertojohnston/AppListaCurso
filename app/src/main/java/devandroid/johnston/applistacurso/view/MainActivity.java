@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     Pessoa pessoa;
 
-    List <String> nomeDosCursos;
-    List<Curso> listaDeCursos; //importa a classe Curso 47
+    List <String> nomeDosCursos; //importa a classe Curso 47
+    // List<Curso> listaDeCursos;
 
     EditText editPrimeiroNome;
     EditText editSobrenomeAluno;
@@ -48,9 +48,6 @@ public class MainActivity extends AppCompatActivity {
         controller = new PessoaController(MainActivity.this);
         controller.toString();
 
-        cursoController = new CursoController();
-        listaDeCursos = cursoController.getListaDeCursos();
-
         pessoa = new Pessoa();
         controller.buscar(pessoa);
 
@@ -70,13 +67,14 @@ public class MainActivity extends AppCompatActivity {
         btnFinalizar = findViewById(R.id.btnFinalizar); //Busca a classe nativa AppCompatActivity AULA 33.2023
 
         //Adapter -> Layout -> Injetar o Adapter ao Spinner AULA 48
+        cursoController = new CursoController();
+        nomeDosCursos = cursoController.dadosParaSpinner();
+        spinner = findViewById(R.id.spinner); //aula 48
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
                 cursoController.dadosParaSpinner());
-        spinner = findViewById(R.id.spinner); //aula 48
 
-        adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
-
+        adapter.setDropDownViewResource(android.R.layout.simple_list_item_1); //quando clicar no adaptar o que e como vai aparecer
         spinner.setAdapter(adapter);
 
         btnLimpar.setOnClickListener(new View.OnClickListener() { //aula 34.2023
