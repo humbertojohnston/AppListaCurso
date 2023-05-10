@@ -16,6 +16,7 @@ import java.util.List;
 import devandroid.johnston.applistacurso.R;
 import devandroid.johnston.applistacurso.controller.CursoController;
 import devandroid.johnston.applistacurso.controller.PessoaController;
+import devandroid.johnston.applistacurso.model.Curso;
 import devandroid.johnston.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     Pessoa pessoa;
 
     List <String> nomeDosCursos;
+    List<Curso> listaDeCursos; //importa a classe Curso 47
 
     EditText editPrimeiroNome;
     EditText editSobrenomeAluno;
@@ -45,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
         controller = new PessoaController(MainActivity.this);
         controller.toString();
+
+        cursoController = new CursoController();
+        listaDeCursos = cursoController.getListaDeCursos();
 
         pessoa = new Pessoa();
         controller.buscar(pessoa);
@@ -67,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         //Adapter -> Layout -> Injetar o Adapter ao Spinner AULA 48
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
-        cursoController.dadosParaSpinner());
+                cursoController.dadosParaSpinner());
         spinner = findViewById(R.id.spinner); //aula 48
 
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);

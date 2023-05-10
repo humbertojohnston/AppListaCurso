@@ -7,12 +7,12 @@ import devandroid.johnston.applistacurso.model.Curso;
 
 public class CursoController {
 
-    private List listCursos;
+    private List listCursos; //vai devolver uma lista aula 46
 
     public List getListaDeCursos() {//MÉTODO PÚBLICO QUE VAI DEVOLVER UMA LISTA AULA 46.2023
 
         listCursos = new ArrayList<Curso>();
-        listCursos.add(new Curso("Java"));
+            listCursos.add(new Curso("Java"));
         listCursos.add(new Curso("HTML"));
         listCursos.add(new Curso("C#"));
         listCursos.add(new Curso("Python"));
