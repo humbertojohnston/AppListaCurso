@@ -1,12 +1,12 @@
-package devandroid.johnston.applistacurso.controller;
+package devandroid.johnston.appgaseta.controller;
 
 import android.content.SharedPreferences;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import devandroid.johnston.applistacurso.model.Pessoa;
-import devandroid.johnston.applistacurso.view.MainActivity;
+import devandroid.johnston.appgaseta.model.Pessoa;
+import devandroid.johnston.appgaseta.view.MainActivity;
 
 public class PessoaController {
 

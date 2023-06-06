@@ -1,6 +1,4 @@
-package devandroid.johnston.applistacurso.model;
-
-import androidx.annotation.NonNull;
+package devandroid.johnston.appgaseta.model;
 
 public class Pessoa {
 

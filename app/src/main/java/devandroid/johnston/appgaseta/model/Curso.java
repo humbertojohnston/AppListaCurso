@@ -1,4 +1,4 @@
-package devandroid.johnston.applistacurso.model;
+package devandroid.johnston.appgaseta.model;
 
 public class Curso {
 

@@ -1,9 +1,9 @@
-package devandroid.johnston.applistacurso.controller;
+package devandroid.johnston.appgaseta.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import devandroid.johnston.applistacurso.model.Curso;
+import devandroid.johnston.appgaseta.model.Curso;
 
 public class CursoController {
 
@@ -12,7 +12,7 @@ public class CursoController {
     public List getListaDeCursos() {//MÉTODO PÚBLICO QUE VAI DEVOLVER UMA LISTA AULA 46.2023
 
         listCursos = new ArrayList<Curso>();
-            listCursos.add(new Curso("Java"));
+        listCursos.add(new Curso("Java"));
         listCursos.add(new Curso("HTML"));
         listCursos.add(new Curso("C#"));
         listCursos.add(new Curso("Python"));

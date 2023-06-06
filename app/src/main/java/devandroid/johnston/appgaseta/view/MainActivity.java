@@ -1,4 +1,4 @@
-package devandroid.johnston.applistacurso.view;
+package devandroid.johnston.appgaseta.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,11 +13,10 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import devandroid.johnston.applistacurso.R;
-import devandroid.johnston.applistacurso.controller.CursoController;
-import devandroid.johnston.applistacurso.controller.PessoaController;
-import devandroid.johnston.applistacurso.model.Curso;
-import devandroid.johnston.applistacurso.model.Pessoa;
+import devandroid.johnston.appgaseta.R;
+import devandroid.johnston.appgaseta.controller.CursoController;
+import devandroid.johnston.appgaseta.controller.PessoaController;
+import devandroid.johnston.appgaseta.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package devandroid.johnston.applistacurso.view;
+package devandroid.johnston.appgaseta.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import devandroid.johnston.applistacurso.R;
+import devandroid.johnston.appgaseta.R;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -26,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent telaPrincipal = new Intent(SplashActivity.this, MainActivity.class); //muda de tela
+                Intent telaPrincipal = new Intent(SplashActivity.this, GasEtaActivity.class); //muda de tela
                 startActivity(telaPrincipal);
                 finish(); //para a tela não voltar
 
